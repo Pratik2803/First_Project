@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pwd_generator/bootstrap.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+<h1>Welcome To About</h1><br />
+
+<p class="text-muted"> I have created this website to enhance my skills.  I want to be a <strong>webmaster</strong></p>
+    <img src="{% static 'pwd_generator/children-593313_640.jpg' %}" alt="smily" class="img-fluid img-thumbnail text-center">
+
+<blockquote class="blockquote">Just do it don't think</blockquote>
+<footer class="blockquote-footer">Pratik</footer>
+</div>
+
+
+<a href="{% url 'home' %}" class="d-flex justify-content-center"> Back To Home </a>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>

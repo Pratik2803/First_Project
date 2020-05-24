@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png">
+
+</head>
+<body>
+
+<div class="container">
+<h1 style="text-align:center">Password Generator</h1>
+<div class="d-flex justify-content-center">
+<form action="{% url 'pwd' %}">
+    <label for="length"><u>Password Length  </u></label>
+    <select name="length" id="length" class="form-control-sm">
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> 8 </option>
+        <option value="9"> 9 </option>
+        <option value="10"> 10 </option>
+        <option value="11"> 11 </option>
+        <option value="12" selected> 12 </option>
+        <option value="13"> 13 </option>
+        <option value="14"> 14 </option>
+    </select><br />
+    <div class="form-check">
+
+        <input type="checkbox" name="upper_case" id="upper_case" value="upper_case" class="form-check-input">
+        <label for="upper_case" class="form-check-label"> Upper Case </label>
+    </div>
+
+    <div class="form-check">
+    <input class="form-check-input" type="checkbox" name="special" id="special" value="special">
+        <label for="special" class="form-check-label" > Special Characters </label>
+    </div>
+
+    <div>
+        <input type="checkbox" name="number" id="number" value="number">
+        <label for="number">Number</label>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Password Generator">
+</form>
+</div>
+<br /> <br />
+<button type="button" onclick="window.location.href ={% url 'about' %};" class="btn btn-secondary float-right"> About </button>
+</div>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>
